@@ -1,0 +1,19 @@
+{
+  "name": "localapitest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "chromedriver": "^110.0.0",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^13.5.2",
+    "selenium-webdriver": "^4.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "send": "node index.js",
+    "login": "node register_gv.js",
+    "test": "node test.js"
+  }
+}

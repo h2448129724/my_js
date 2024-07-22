@@ -1,0 +1,27 @@
+
+！！！
+执行代码前需要执行的步骤:
+    1，拉取新的代码
+    2, 执行npm install
+！！！
+
+！！！ 注意配置文件必须放到setting文件夹，运行命令时无需输入全路径，只需将文件名字跟在后面就可以，例如配置文件为nodejs-demo/file/setting/register.json 只需运行 npm run login register就可以
+
+注册步骤:
+  1,确定配置文件，配置文件名称需要跟到命令行后面
+  2,将分组名称写入到配置文件中，例如如果我想注册到demo1分组，需将配置文件(格式与nodejs-demo/file/setting/register.json格式保持一致) 中 groupName 字段值改为 demo1
+  3,拷贝账号excel文件到nodejs-demo/file/excel_info 文件夹中，并将配置文件(格式与nodejs-demo/file/setting/register.json格式保持一致) 中 accountFileName 字段值改为文件的名称，注意不要带后缀！！！
+  4,运行npm run login 配置文件名称    开始注册
+
+
+发送短信步骤:
+   1,确定配置文件，配置文件名称需要跟到命令行后面
+   2,将分组名称写入到配置文件中，例如如果我想发送短信到demo2分组，需将配置文件(格式与nodejs-demo/file/setting/sendMsg.json格式保持一致) 中 groupName 字段值改为 demo2
+   3,拷贝短信内容excel文件到nodejs-demo/file/message_excel_info 文件夹中，并将配置文件(格式与nodejs-demo/file/setting/sendMsg.json格式保持一致) 中 messageFileName 字段值改为文件的名称，注意不要带后缀！！！
+   4,运行npm run send 配置文件名   开始发送短信
+
+
+如何停止运行:
+   1,不建议使用ctrl+c强制停止程序，这样可能会导致数据不完整
+   2,如果想停止注册步骤，只需将配置文件中 isRunning 字段的值设置为 false 即可，程序会定期读取字段值，判断是否继续执行下去，如果改完后没有立即停止，可以稍等一会，尽量不要使用ctrl+c
+   3,如果想停止发送短信步骤，只需将配置文件中 isRunning 字段的值设置为 false 即可，程序会定期读取字段值，判断是否继续执行下去，如果改完后没有立即停止，可以稍等一会，尽量不要使用ctrl+c
